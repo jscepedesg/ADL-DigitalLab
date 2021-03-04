@@ -2,7 +2,7 @@ package com.adl.api.utility;
 
 import com.adl.api.entity.Comparison;
 
-public class ComparisonAlgorithm {
+public class ComparisonUtil {
 	
 	/**
 	 * Method to compare two words and determine if they have the same letters.
@@ -11,7 +11,7 @@ public class ComparisonAlgorithm {
 	 * @return boolean
 	 * @version 1.0.0   
 	*/
-	public static boolean getComparison(Comparison comparison) {
+	public static boolean compareElements(Comparison comparison) {
 		if(comparison.getWordOne().length() == comparison.getWordTwo().length()) {
 			for(int i = 0; i < comparison.getWordOne().length(); i++) {
 				if(!comparison.getWordTwo().contains(String.valueOf(comparison.getWordOne().charAt(i)))) {
