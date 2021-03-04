@@ -20,4 +20,31 @@ public class ComparisonAlgorithmTest {
 		
 		Assertions.assertThat(ComparisonAlgorithm.getComparison(comparison)).isEqualTo(true);
 	}
+	
+	@Test
+	public void whenValidUppercaseAndLowercase() {
+		Comparison comparison = new Comparison();
+		comparison.setWordOne("Army");
+		comparison.setWordTwo("mary");
+		
+		Assertions.assertThat(ComparisonAlgorithm.getComparison(comparison)).isEqualTo(false);
+	}
+	
+	@Test
+	public void whenValidWordsDifferentLetters() {
+		Comparison comparison = new Comparison();
+		comparison.setWordOne("test");
+		comparison.setWordTwo("lary");
+		
+		Assertions.assertThat(ComparisonAlgorithm.getComparison(comparison)).isEqualTo(false);
+	}
+	
+	@Test
+	public void whenValidDifferentLength() {
+		Comparison comparison = new Comparison();
+		comparison.setWordOne("testtest");
+		comparison.setWordTwo("mary");
+		
+		Assertions.assertThat(ComparisonAlgorithm.getComparison(comparison)).isEqualTo(false);
+	}
 }
