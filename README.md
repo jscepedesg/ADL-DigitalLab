@@ -13,5 +13,5 @@ Prueba técnica Digital Lab, rest que compara dos palabras para determinar si ti
 
 ## DockerHub
 
-[digitallab](https://hub.docker.com/repository/docker/jsebastianc/adl-digitallab)
+[digitallab](https://hub.docker.com/r/jsebastianc/adl-digitallab)
 
